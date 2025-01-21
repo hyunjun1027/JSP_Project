@@ -1,0 +1,229 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.search-bar {
+    width: 400px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+.search-button {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.results-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 240px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    align-items: center;
+}
+
+.results-info span {
+    font-size: 14px;
+    color: #666;
+}
+
+
+.sort-option {
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    font-size: 14px;
+    padding: 10px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDE0TDcgOUgxN0wxMiAxNFoiIGZpbGw9IiM2NjYiLz4KPC9zdmc+Cg==');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+}
+
+.sort-option:focus {
+    border-color: #aaa;
+}
+
+.sort-option option {
+    padding: 10px;
+}
+
+.results {
+    padding: 20px 240px;
+}
+
+.result-item {
+    display: flex;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-height: 150px;
+    overflow: hidden;
+    white-space: normal;
+}
+
+.result-item p{
+
+  width: 90ch;
+  overflow: hidden; 
+  display: -webkit-box;  
+  -webkit-line-clamp: 3;  
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  text-overflow: ellipsis;
+	
+}
+
+.result-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+#_searchType{
+   
+   border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 4px;
+   
+}
+
+.result-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    position: relative;
+    flex: 1;
+}
+
+.result-title {
+    font-size: 18px;
+    margin: 10px 0 0 0;  /* 위쪽에 10px 여백 추가 */
+    color: #333;
+}
+
+.result-description {
+    font-size: 14px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.result-author {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 12px;
+    color: #888;
+}
+
+.result-stats {
+    font-size: 12px;
+    color: #666;
+}
+
+.result-stats span {
+    margin-right: 10px;
+}
+
+/* a 태그의 밑줄 제거 */
+.result-link {
+    text-decoration: none; /* 밑줄 제거 */
+    color: inherit; /* 링크의 글자색을 부모 요소에 상속 */
+}
+
+/* 제목에 hover 시 링크 색 강조 */
+.result-link:hover .result-title {
+    color: #00a884; /* 원하는 색상으로 변경 */
+    text-decoration: underline; /* hover 시 밑줄을 추가할 수 있음 */
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    padding-bottom: 100px;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    margin: 0 5px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.pagination a:hover {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+.pagination .active a {
+    background-color: #333333a6;
+    color: #fff;
+    font-weight: bold;
+}
+
+.prev-page, .next-page {
+    font-weight: bold;
+}
+.write-btn {
+    display: inline-block;
+    margin-left: 30px;
+    border-color: #00a884; 
+   display: flex;
+   justify-content: flex-end;
+}
+
+.btn-write {
+    background-color: #00a884;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    border-color: #00a884; 
+    cursor: pointer;
+    margin-right: 240px;
+}
+
+.btn-write:hover {
+    background-color: #00a884;
+}
+
+#btnSearch:hover {
+   transition-duration: 1s;
+    background-color : #86D293;
+    color: #fff;
+}
+
+
+

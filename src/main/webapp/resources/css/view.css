@@ -1,0 +1,235 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.content {
+   padding: 160px 240px 100px; /* 헤더 아래로 여백 추가 */
+   text-align: left;
+   background-color: white;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   width: 100%; /* 전체 너비 사용 */
+   margin: 0; /* 기본 마진 제거 */
+}
+
+.post-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.post-meta {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.post-meta img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.post-meta span {
+    font-size: 14px;
+    color: #777;
+}
+
+.post-content {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.post-content img {
+    height: 200px;
+}
+
+.comments-section {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.comments-section h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #00a884;
+}
+
+.comment {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.comment-input {
+    display: flex;
+    align-items: center; /* 수직 중앙 정렬 */
+    margin-top: 10px;
+}
+
+.comment-input textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    resize: none;
+    height: 60px;
+    margin-right: 10px; /* 버튼과의 간격 */
+}
+
+.comment-input button {
+    padding: 10px;
+    background-color: #00a884;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer {
+    text-align: center;
+    margin-top: auto;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.footer p {
+    font-size: 14px;
+    color: #777;
+}
+
+.login-message {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #777;
+}
+
+.post-list {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.post-list-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.post-list-item:last-child {
+    border-bottom: none;
+}
+
+.post-list-item span {
+    color: #00a884;
+    cursor: pointer;
+}
+
+#btnComm {
+   margin: 10px 0px; 
+   background-color: #00a884; 
+   color: white; 
+   border: none; 
+   border-radius: 5px; 
+   padding: 10px; 
+   cursor: pointer;
+}
+
+.btnList {
+   background-color: #00a884; 
+   color: white; 
+   border: none; 
+   border-radius: 5px;
+    padding: 10px; 
+    cursor: pointer;
+}
+
+.btnLikey {
+    background-color: #8bd145; 
+   color: white; 
+   border: none; 
+   border-radius: 5px;
+   margin: 40px 0px 0px 0px;
+    padding: 10px; 
+    cursor: pointer;
+}
+
+.comment {
+        background-color: #f9f9f9;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+    }
+
+    .comment-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .comment-header strong {
+        font-size: 16px;
+        color: #333;
+    }
+
+    .comment-date {
+        font-size: 12px;
+        color: #777;
+    }
+
+    .comment-content {
+        margin-top: 5px;
+        font-size: 14px;
+        color: #333;
+    }
+
+    .comment-actions {
+        margin-top: 10px;
+    }
+
+    .comment-actions button {
+        background-color: #00a884;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: 12px;
+    }

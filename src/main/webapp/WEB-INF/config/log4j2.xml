@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+	<!-- 환경변수 시작 -->
+	<Properties>
+        <Property name="logNm">board</Property>
+        <!-- Property name="layoutPattern">%style{%d{yyyy/MM/dd HH:mm:ss,SSS}}{cyan} %highlight{[%-5p]}{FATAL=bg_red, ERROR=red, INFO=green, DEBUG=blue}  [%C] %style{[%t]}{yellow}- %m%n -</Property -->
+        <Property name="layoutPattern">[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%thread] %-5level %logger{36} - %msg%n</Property>
+        <Property name="logPath">C:/project/webapps/localhost/src/main/webapp/WEB-INF/logs</Property>
+        <Property name="logArchivedPath">${logPath}/archived</Property>
+    </Properties>
+    <!-- 환경변수 종료 -->
+    
+    <!-- Appender 시작 -->
+	<Appenders>
+		<Console name="console" target="SYSTEM_OUT">
+			<PatternLayout pattern="${layoutPattern}" />
+		</Console>
+		<RollingFile name="file" fileName="${logPath}/${logNm}.log" filePattern="${logArchivedPath}/archived.log">
+			<PatternLayout>
+				<pattern>${layoutPattern}</pattern>
+			</PatternLayout>
+			<Policies>
+				<SizeBasedTriggeringPolicy size="10 MB" />
+			</Policies>
+			<DefaultRolloverStrategy min="1" max="10" fileIndex="max" /> <!-- min:최소값, max:최대값, fileIndex:min으로 설정시 작은 index가 최신 파일이고 max로 설정시 높은 index가 더 최신 파일 -->
+		</RollingFile>
+	</Appenders>
+	<!-- Appender 종료 -->
+	<Loggers>
+		<Root level="DEBUG" additivity="false"> <!-- additivity:중복된 로그를 남길 지에 대한 속성 -->
+			<AppenderRef ref="console" />
+			<AppenderRef ref="file" />
+		</Root>
+		<Logger name="com.sist" level="DEBUG" />
+		<Logger name="org.apache" level="DEBUG" />
+	</Loggers>
+</Configuration>
